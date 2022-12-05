@@ -52,8 +52,10 @@ class _HomePageState extends State<HomePage> {
     final Map<String, dynamic> body = jsonDecode(response.body) as Map<String, dynamic>;
     final List<dynamic> results = body['results'] as List<dynamic>;
 
-    pictures.addAll(results
-        .map((dynamic elem) => ((elem as Map<String, dynamic>)['urls'] as Map<String, dynamic>)['small'] as String),);
+    pictures.addAll(
+      results
+          .map((dynamic elem) => ((elem as Map<String, dynamic>)['urls'] as Map<String, dynamic>)['small'] as String),
+    );
     page = page + 1;
 
     setState(() {
