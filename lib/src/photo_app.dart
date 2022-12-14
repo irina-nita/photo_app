@@ -34,9 +34,11 @@ void main() async {
     ..dispatch(const SubmitQuery())
     ..dispatch(const GetPhotos());
 
-  runApp(PhotoApp(
-    store: store,
-  ),);
+  runApp(
+    PhotoApp(
+      store: store,
+    ),
+  );
 }
 
 class PhotoApp extends StatelessWidget {

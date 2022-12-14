@@ -66,7 +66,7 @@ Map<String, dynamic> _$$ProfileImage$ToJson(_$ProfileImage$ instance) => <String
 
 _$AppState$ _$$AppState$FromJson(Map<String, dynamic> json) => _$AppState$(
       photos:
-      // ignore: always_specify_types
+          // ignore: always_specify_types
           (json['photos'] as List<dynamic>?)?.map((e) => UnsplashPhoto.fromJson(e as Map<String, dynamic>)).toList() ??
               const <UnsplashPhoto>[],
       isLoading: json['isLoading'] as bool? ?? false,
